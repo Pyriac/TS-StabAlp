@@ -1,0 +1,239 @@
+.homeContainer {
+  margin-top: 64px; /* Adjust for the height of the header */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.homeContainer h2 {
+    font-family: Kadwa, serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--black);
+    text-align: center;
+    margin: 0 1rem;
+    margin-top: 1rem;
+}
+.homeContainer h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: var(--black);
+    margin: 30px auto;
+
+}
+
+.homeContainer h3 {
+    font-family: var(--main-font);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--black);
+    text-align: center;
+    margin: 0 0.5rem;
+}
+
+.homeContainer p {
+    font-family: Jura, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    padding: 0 0.5rem;
+    margin-top: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    margin-bottom: 10rem;
+}
+
+.homeContainer a {
+    font-family: Jura, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+    margin: auto;
+}
+
+
+.homeContainer img {
+    height: 100svh;
+}
+
+.blackFilter{
+    height: 100svh;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+article {
+    margin-top: 50px;
+}
+
+article, h1, h2 {
+    padding: 20px 0;
+}
+
+article p {
+    font-family: jura, sans-serif;
+    font-weight: 500;
+    color: var(--black);
+    padding: 8px 0;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+}
+
+.portrait {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.portrait img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.contact-link {
+    color: var(--black);
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 auto;
+}
+
+.cabestan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.cabestan img {
+    width: 200px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.linkCabestan {
+    color: var(--black);
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 20px;
+}
+.linkCabestan::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--blue);
+}
+
+@media (min-width: 980px) {
+    .homeContainer {
+      margin-top: 0;
+      height: calc(100vh - 112px); /* Full height */
+      align-items: unset;
+    }
+    .homeContainer h2 {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+    .homeContainer h2::after{
+        background-color: #fff;
+    }
+    .homeContainer h3 {
+      font-size: 2rem;
+      color: #fff;
+    }
+
+    .homeContainer p {
+        max-width: 800px;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+    .blackFilter{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px 80px;
+    }
+    section {
+        width: 60%;
+        padding-top: 50px;
+    }
+    article, h1, h2 {
+        padding: 40px 0;
+    }
+    .presentation {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .presentation p {
+        padding: 8px 0;
+    }
+    .presentation div {
+        max-width: 50%;
+        margin: 0 20px;
+    }
+    .portrait {
+        flex-direction: column;
+        align-items: center;
+    }
+       
+    .portrait img {
+        width: 250px;
+        margin: 0 20px;
+    }
+
+    .portrait p {
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+
+    article p {
+        font-size: 1.2rem;
+        padding: 8px 20px;
+    }
+
+    .cabestan {
+        margin-top: 40px;
+        margin-bottom: 80px;
+    }
+    
+    .cabestan img {
+        width: 400px;
+    }
+    
+    .linkCabestan {
+        font-size: 1.3rem;
+    }
+
+    .linkCabestan:hover {
+        color: var(--blue);
+    }
+    .linkCabestan:hover::after {
+        background-color: var(--black);
+    }
+    
+  }

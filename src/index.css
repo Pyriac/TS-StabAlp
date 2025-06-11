@@ -1,0 +1,61 @@
+/* Reset CSS */
+@import url("https://fonts.googleapis.com/css2?family=Jura&family=Kadwa&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #000;
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 200%;
+}
+
+button, input, textarea, select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  appearance: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer {
+  width: 100%;
+}
+
+:root {
+  --grey: #eeeeeb;
+  --black: #2a2d34;
+  --blue-light: #96c9dc;
+  --green: #c5e0d8;
+  --blue: #239fc0;
+  --title-font: "Kadwa", serif;
+  --main-font: "Jura", sans-serif;
+}

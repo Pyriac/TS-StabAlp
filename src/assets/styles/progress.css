@@ -1,0 +1,28 @@
+.progress-wrapper {
+    display: flex;
+    gap: 4px;
+    position: relative;
+    bottom: 0;
+    width: 80%;
+    height: 4px;
+    z-index: 10;
+  }
+  
+  .progress-segment {
+    flex: 1;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: var(--blue-light);
+  }
+
+  @media (min-width: 980px) {
+    .progress-wrapper {
+      bottom: 20px;
+    }
+  }

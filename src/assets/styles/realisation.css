@@ -1,0 +1,13 @@
+.arrow-white::before, .arrow-white::after {
+    background-color: var(--blue-light);
+}
+
+.arrow-main::before, .arrow-main::after {
+    background-color: var(--black);
+}
+
+@media (min-width: 980px) {
+    .arrow-main::before, .arrow-main::after {
+        background-color: var(--blue-light);
+    }
+}

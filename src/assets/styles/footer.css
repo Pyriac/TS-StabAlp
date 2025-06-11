@@ -1,0 +1,87 @@
+.footerContainer{
+  width: 100vw;
+  background-color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  
+}
+.footerContainer img {
+    width: 150px;
+    align-items: center;
+}
+
+.footerContainer>div p {
+  color: #fff;
+  font-family: 'Kadwa', serif;
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+}
+
+.footerContact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.phone {
+  color: #fff;
+  font-family: 'jura', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.email {
+  color: #fff;
+  font-family: 'jura', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--blue-light);
+  width: 80vw;
+}
+
+/* Pour cibler la liste dans le footer */
+.footerContainer ul {
+    margin-top: 10px;
+    border-bottom: 1px solid var(--blue-light);
+    padding-bottom: 10px;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Pour cibler les liens de la liste */
+.footerContainer ul li a {
+    color: #fff;
+    font-family: 'jura', sans-serif;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.footerContainer p {
+  color: #fff;
+  font-family: 'jura', sans-serif;
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (min-width: 980px) {
+    .footerContainer {
+        width: 100%;
+        padding: 0;
+        padding-bottom: 20px;
+    }
+}
