@@ -51,8 +51,8 @@ const baseJsonLD = {
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Le Bourg",
-    "addressLocality": "Saint-Pierre-d'Albigny",
-    "postalCode": "73250",
+    "addressLocality": "Lorcières",
+    "postalCode": "15320",
     "addressCountry": "France"
   },
   "areaServed": {
