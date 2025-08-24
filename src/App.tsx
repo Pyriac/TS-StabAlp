@@ -39,7 +39,50 @@ function App() {
     title: "Stab'Alp | Conseil en bâtiment agricole",
     description: "Stab'Alp est un bureau d'études spécialisé en bâtiments d’élevage, fondé par Laurent Pineau.",
   };
-  
+
+const baseJsonLD = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Stab'Alp",
+  "description": description,
+  "image": "https://stabalp.fr/assets/logo-DIRAi4Dq.png",
+  "url": "https://www.stabalp.fr",
+  "telephone": "+33 6 86 53 42 05",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Le Bourg",
+    "addressLocality": "Saint-Pierre-d'Albigny",
+    "postalCode": "73250",
+    "addressCountry": "France"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": "Auvergne-Rhône-Alpes"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Laurent Pineau"
+  },
+  "foundingDate": "1996"
+};
+
+// Ajouter hasOfferCatalog seulement sur /prestations
+const jsonLD = location.pathname === "/prestations"
+  ? {
+      ...baseJsonLD,
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Prestations bâtiment agricole",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conception de bâtiments agricoles" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Rénovation de bâtiments d'élevage" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mise aux normes" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "DEXEL" } }
+        ]
+      }
+    }
+  : baseJsonLD;
+
   return (
     <>
       <Helmet>
@@ -48,8 +91,11 @@ function App() {
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://https://www.stabalp.com${location.pathname}`} />
+        <meta property="og:url" content={`https://www.stabalp.fr${location.pathname}`} />
         <meta property="og:image" content="https://https://www.stabalp.com/assets/images/Portrait_Laurent_Pineau.png" />
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLD)}
+        </script>
       </Helmet>
       <NavBar />
       <main>

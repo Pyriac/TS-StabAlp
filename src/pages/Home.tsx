@@ -3,6 +3,8 @@ import "../assets/styles/button.css";
 import Back from "../assets/images/background.webp";
 import Portrait from "../assets/images/Portrait_Laurent_Pineau.jpg";
 import Cabestan from "../assets/images/Logo_Cabestan.png";
+import { Link } from "react-router-dom";
+import ScrollTopButton from "../components/ScrollTopButton";
 
 export default function Home() {
   return (
@@ -13,14 +15,17 @@ export default function Home() {
           backgroundImage: `url(${Back})`,
         }}
       >
-        <div className="blackFilter">
+        <div itemScope itemType="https://schema.org/LocalBusiness" className="blackFilter">
           <h2>Conseil en bâtiment d'élevage depuis 1996</h2>
           <h3>Spécialiste en bâtiment agricole de montagne</h3>
           <p>
-            Stab' Alp est un bureau d'études spécialisé dans le conseil en
-            bâtiment d'élevage. Je vous accompagne dans la conception de vos
+            <span itemProp="name">Stab' Alp</span> est un <span itemProp="description">bureau d'études spécialisé dans le conseil en
+            bâtiment d'élevage.</span> Je vous accompagne dans la conception de vos
             projets de construction, de rénovation ou de mise aux normes de vos
             bâtiments agricoles.
+            <br />
+            <span itemProp="areaServed"><strong>Zone d’intervention&nbsp;: Auvergne – Rhône-Alpes</strong></span>
+             
           </p>
           <div className="button button-header-home rectangle">
             <a href="#presentation">En savoir plus</a>
@@ -62,9 +67,9 @@ export default function Home() {
           </div>
 
           <div className="button button-header-home rectangle marged-top button-centered">
-            <a href="/contact" className="contact-link">
+            <Link to="/contact" className="contact-link">
               Contactez - moi
-            </a>
+            </Link>
           </div>
         </article>
         <article>
@@ -93,9 +98,9 @@ export default function Home() {
             et des contraintes très diverses.
           </p>
           <div className="button button-header-home rectangle marged-top button-centered">
-            <a href="/realisations" className="contact-link">
+            <Link to="/realisations" className="contact-link">
               Mes réalisations
-            </a>
+            </Link>
           </div>
         </article>
         <article>
@@ -130,6 +135,7 @@ export default function Home() {
           </div>
         </article>
       </section>
+      <ScrollTopButton />
     </>
   );
 }

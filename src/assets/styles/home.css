@@ -110,6 +110,8 @@ section {
     margin-right: 20px;
 }
 
+
+
 .contact-link {
     color: var(--black);
     font-weight: 600;
@@ -145,6 +147,7 @@ section {
     height: 3px;
     background-color: var(--blue);
 }
+
 
 @media (min-width: 980px) {
     .homeContainer {
