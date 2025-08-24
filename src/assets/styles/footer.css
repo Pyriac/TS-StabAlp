@@ -38,6 +38,10 @@
   margin-top: 10px;
 }
 
+.phone-black {
+  color: black;
+}
+
 .email {
   color: #fff;
   font-family: 'jura', sans-serif;
@@ -48,6 +52,11 @@
   border-bottom: 1px solid var(--blue-light);
   width: 80vw;
 }
+.email-black {
+  color: black;
+  border-bottom: none;
+}
+
 
 /* Pour cibler la liste dans le footer */
 .footerContainer ul {
