@@ -127,6 +127,12 @@
   }
 
   @media (min-width: 980px) {
+.main-prestations {
+  margin-top: 0;
+   min-height: calc(100vh - 181px);
+   justify-content: center;
+}
+
     .presta-article-carte {
       flex-direction: row-reverse;
       justify-content: space-between;
