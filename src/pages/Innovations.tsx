@@ -1,7 +1,10 @@
+import "../assets/styles/innovations.css";
+
 export default function Innovations() {
     return (
       <>
-        <h2>Des références...</h2>
+      <section className="inno-main">
+        <h2 className="inno-first_title">Des références...</h2>
         <p>
           Un bâtiment agricole est toujours réalisé sur la base de références
           établies par les organismes de développement comme les Chambres
@@ -9,7 +12,7 @@ export default function Innovations() {
           publications existent sous la forme de livres très complet ou
           d&apos;articles dans la presse agricole ou sur le web.
         </p>
-        <h2>... adaptées à un contexte</h2>
+        <h2 className="firstTitle">... adaptées à un contexte</h2>
         <p>
           Toutefois, chaque cas est différent, car un bâtiment va voir sa
           configuration varier dabord en fonction de ce qu&apos;on y produit
@@ -22,7 +25,7 @@ export default function Innovations() {
           parfait exemple de toutes ces contraintes qui font qu&apos;un bâtiment
           réussi est forcément adapté au site.
         </p>
-        <h2>où l&apos;innovation a toute sa place</h2>
+        <h2 className="firstTitle">où l&apos;innovation a toute sa place</h2>
         <p>
           Pour concevoir un bâtiment agricole, il faut donc bénéficier de
           références et s&apos;adapter au site. C&apos;est pourquoi on retrouve en
@@ -45,6 +48,7 @@ export default function Innovations() {
           pailleuses automatiques qui permettent de fait un paillage fréquent et
           très bien réparti.
         </p>
+        </section>
       </>
     );
   }
