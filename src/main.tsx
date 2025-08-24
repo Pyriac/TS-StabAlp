@@ -7,7 +7,7 @@ import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
 import "./index.css";
 import Prestations from "./pages/Prestations.tsx";
-import Réalisations from "./pages/Realisations.tsx";
+import Realisations from "./pages/Realisations.tsx";
 import Innovations from "./pages/Innovations.tsx";
 import Contact from "./pages/Contact.tsx";
 import MentionsLegales from "./pages/Mentions_legales.tsx";
@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/realisations",
-        element: <Réalisations />,
+        element: <Realisations />,
       },
       { 
         path: "/innovations", 
@@ -45,6 +45,11 @@ const router = createBrowserRouter([
       {
       path: "/politique-de-confidentialite",
       element: <PolitiqueDeConfidentialite />
+      }
+      ,
+      {
+        path: "*", 
+        element: <Home />,
       }
     ],
   },
