@@ -15,26 +15,26 @@ function App() {
   const location = useLocation();
   const meta: Record<string, { title: string; description: string }> = {
     "/": {
-      title: "Accueil | Stab'Alp - Laurent Pineau, conseiller agricole",
-      description: "Conseil en bâtiment agricole depuis 1996. Stab'Alp accompagne vos projets en montagne.",
-    },
-    "/prestations": {
-      title: "Prestations | Stab'Alp – Bâtiments agricoles de montagne | Stab'Alp",
-      description: "Découvrez les prestations proposées par Laurent Pineau : construction, rénovation, mise aux normes de bâtiments d’élevage.",
-    },
-    "/realisations": {
-      title: "Réalisations | Stab'Alp – Projets agricoles",
-      description: "Exemples de projets accompagnés par Stab'Alp : bâtiments d’élevage, fromageries, ateliers agricoles, etc.",
-    },
-    "/innovations": {
-      title: "Innovations | Stab'Alp - Techniques et approches nouvelles",
-      description: "Laurent Pineau propose des solutions innovantes adaptées aux contraintes des zones de montagne.",
-    },
-    "/contact": {
-      title: "Contact – Laurent Pineau | Conseil en bâtiment agricole",
-      description: "Besoin d’un conseil ou d’un accompagnement ? Contactez Laurent Pineau, conseiller indépendant.",
-    },
-  };
+      title: "Stab'Alp | Laurent Pineau - expert bâtiment d'élevage en Auvergne-Rhône-Alpes",
+      description: "Conseil en bâtiment agricole depuis 1996. Stab'Alp accompagne vos projets de construction et rénovation de bâtiments d’élevage."
+  },
+  "/prestations": {
+    title: "Prestations bâtiment d’élevage – Stab'Alp | Laurent Pineau",
+    description: "Découvrez les services proposés par Laurent Pineau : conception, rénovation et mise aux normes de bâtiments agricoles."
+  },
+  "/realisations": {
+    title: "Réalisations bâtiments d’élevage – Stab'Alp | Laurent Pineau",
+    description: "Exemples de projets accompagnés par Stab'Alp : bâtiments d’élevage, fromageries et ateliers agricoles en montagne."
+  },
+  "/innovations": {
+    title: "Innovations bâtiment agricole – Stab'Alp | Laurent Pineau",
+    description: "Laurent Pineau propose des solutions innovantes pour la construction et la rénovation de bâtiments d’élevage."
+  },
+  "/contact": {
+    title: "Contact – Laurent Pineau | Stab'Alp bâtiment d’élevage",
+    description: "Contactez Laurent Pineau, conseiller en bâtiment d’élevage, pour vos projets agricoles en Auvergne-Rhône-Alpes."
+  }
+};
   const { title, description } = meta[location.pathname] || {
     title: "Stab'Alp | Conseil en bâtiment agricole",
     description: "Stab'Alp est un bureau d'études spécialisé en bâtiments d’élevage, fondé par Laurent Pineau.",
@@ -42,21 +42,28 @@ function App() {
 
 const baseJsonLD = {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
+  "@type": "LocalBusiness",
   "name": "Stab'Alp",
   "description": description,
   "image": "https://stabalp.fr/assets/logo-DIRAi4Dq.png",
   "url": "https://www.stabalp.fr",
   "telephone": "+33 6 86 53 42 05",
+  "email": "laurent.pineau73@gmail.com",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Le Bourg",
+    "streetAddress": "3 Rue de la Ribeyre",
     "addressLocality": "Lorcières",
     "postalCode": "15320",
-    "addressCountry": "France"
+    "addressRegion": "Auvergne-Rhône-Alpes",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 44.957875622044206, 
+    "longitude": 3.2709880707845542
   },
   "areaServed": {
-    "@type": "Place",
+    "@type": "AdministrativeArea",
     "name": "Auvergne-Rhône-Alpes"
   },
   "founder": {
@@ -91,8 +98,12 @@ const jsonLD = location.pathname === "/prestations"
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:type" content="website" />
+        <meta name="geo.region" content="FR-ARA" />
+        <meta name="geo.placename" content="Lorcières" />
+        <meta name="geo.position" content="44.957875622044206;3.2709880707845542" />
+        <meta name="ICBM" content="44.957875622044206,3.2709880707845542" />
         <meta property="og:url" content={`https://www.stabalp.fr${location.pathname}`} />
-        <meta property="og:image" content="https://https://www.stabalp.com/assets/images/Portrait_Laurent_Pineau.png" />
+        <meta property="og:image" content="https://www.stabalp.com/assets/images/Portrait_Laurent_Pineau.png" />
         <script type="application/ld+json">
           {JSON.stringify(jsonLD)}
         </script>

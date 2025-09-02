@@ -1,1 +1,5 @@
+# Redirection www → non-www
+https://www.stabalp.fr/*  https://stabalp.fr/:splat  301!
+
+# SPA routing pour React
 /*    /index.html   200
