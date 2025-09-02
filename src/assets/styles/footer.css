@@ -48,14 +48,22 @@
   font-size: 1.2rem;
   text-align: center;
   font-weight: 600;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--blue-light);
   width: 80vw;
 }
 .email-black {
   color: black;
   border-bottom: none;
 }
+
+.adress {
+  color: #fff;
+  font-family: 'jura', sans-serif;
+  text-align: center;
+  font-weight: 600;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--blue-light);
+  width: 80vw;
+  }
 
 
 /* Pour cibler la liste dans le footer */

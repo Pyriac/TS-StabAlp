@@ -15,6 +15,15 @@ export default function Footer() {
         <div className="email">
         <p>laurent.pineau73@gmail.com</p>
         </div>
+        <div className="adress">
+    <a
+      href="https://maps.app.goo.gl/gSZ2R41n6dXQPhTP7"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      3 Rue de la Ribeyre, 15320 Lorcières, Cantal, Auvergne-Rhône-Alpes
+    </a>
+        </div>
         </div>
         <div>
             <ul>

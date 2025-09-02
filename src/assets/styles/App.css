@@ -16,6 +16,10 @@ main {
     display: flex;
 }
 
+.contact-adress {
+    margin-bottom: 40px;
+}
+
 @media (min-width: 980px) {
     main {
         width: calc(100% - 112px); /* Adjust width to account for the sidebar */
