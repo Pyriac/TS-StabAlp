@@ -21,7 +21,7 @@ export default function Contact() {
       </p>
     </section>
     <section className="contact-adress" id="contact-map">
-      <GoogleMapEmbed address="3 Rue de la Ribeyre, 15320 Lorcières" width="700" height="525" />
+      <GoogleMapEmbed address="3 Rue de la Ribeyre, 15320 Lorcières"/>
       <h2>Adresse</h2>
       <p>3 Rue de la Ribeyre, 15320 Lorcières, Cantal, Auvergne-Rhône-Alpes</p>
       <a className="linkCabestan" href="https://maps.app.goo.gl/gSZ2R41n6dXQPhTP7" target="_blank" rel="noopener noreferrer">Voir sur Google Maps</a>
