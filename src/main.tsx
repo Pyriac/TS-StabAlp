@@ -12,6 +12,7 @@ import Innovations from "./pages/Innovations.tsx";
 import Contact from "./pages/Contact.tsx";
 import MentionsLegales from "./pages/Mentions_legales.tsx";
 import PolitiqueDeConfidentialite from "./pages/Politiques_de_confidentialite.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
 const router = createBrowserRouter([
   {
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
       ,
       {
         path: "*", 
-        element: <Home />,
+        element: <NotFound />,
       }
     ],
   },
